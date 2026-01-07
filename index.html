@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Useful Websites - Orobossa Infinity</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #FFD700; /* Golden font */
+            background-color: #000; /* Black background */
+            min-height: 100vh; /* Allows scrolling */
+        }
+
+        /* Sparkly diamond background effect */
+        .sparkles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #fff 10%, transparent 50%);
+            opacity: 0.5;
+            animation: sparkle 2s infinite ease-in-out;
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+            100% { opacity: 0; transform: scale(0) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .ad-section {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 728px; /* Common large banner size */
+            height: 90px; /* Adjust as needed; typical leaderboard is 728x90 */
+            background: #222; /* Dark placeholder */
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 40px 0;
+        }
+
+        li {
+            margin: 15px 0;
+            font-size: 1.4em;
+        }
+
+        a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .readme-section {
+            margin: 60px 0;
+            text-align: left;
+        }
+
+        .readme {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border: 1px solid #444;
+        }
+
+        .support {
+            margin-top: 60px;
+            font-size: 1.3em;
+        }
+
+        .support a {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="sparkles"></div>
+
+    <div class="container">
+        <h1>Top Useful Websites</h1>
+
+        <!-- Google Ad - decent sized box on "splash screen" area (top) -->
+        <div class="ad-section">
+            Google AdSense / Ad Placeholder
+            <!-- Insert your actual AdSense code here, e.g.:
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            -->
+        </div>
+
+        <ul>
+            <li><a href="https://www.wikipedia.org/" target="_blank">Wikipedia - Free encyclopedia</a></li>
+            <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy - Free online courses</a></li>
+            <li><a href="https://www.duolingo.com/" target="_blank">Duolingo - Learn languages for free</a></li>
+            <li><a href="https://www.canva.com/" target="_blank">Canva - Graphic design tool</a></li>
+            <li><a href="https://www.trello.com/" target="_blank">Trello - Project management</a></li>
+            <li><a href="https://www.notion.so/" target="_blank">Notion - All-in-one workspace</a></li>
+            <li><a href="https://www.slack.com/" target="_blank">Slack - Team communication</a></li>
+            <li><a href="https://www.zoom.us/" target="_blank">Zoom - Video conferencing</a></li>
+            <li><a href="https://www.github.com/" target="_blank">GitHub - Code hosting</a></li>
+            <li><a href="https://www.stackoverflow.com/" target="_blank">Stack Overflow - Developer Q&A</a></li>
+            <li><a href="https://buymeacoffee.com/orobossains" target="_blank">Buy Me a Coffee - Support the site!</a></li>
+            <li><a href="https://youtube.com/@orobossainfinity" target="_blank">Orobossa Infinity YouTube - Subscribe for more!</a></li>
+        </ul>
+
+        <div class="readme-section">
+            <h2>Website Details / Readmes</h2>
+            <div class="readme">
+                <h3>Wikipedia</h3>
+                <p>Your description here...</p>
+            </div>
+            <div class="readme">
+                <h3>Khan Academy</h3>
+                <p>Your description here...</p>
+            </div>
+            <!-- Add more as needed for the original 10 + your two new ones -->
+        </div>
+
+        <div class="support">
+            <p>Support the project: <a href="https://buymeacoffee.com/orobossains" target="_blank">Buy Me a Coffee</a></p>
+            <p>Check out my channel: <a href="https://youtube.com/@orobossainfinity" target="_blank">Orobossa Infinity YouTube</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Generate sparkly particles
+        const sparklesContainer = document.querySelector('.sparkles');
+        const numParticles = 60;
+
+        for (let i = 0; i < numParticles; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.animationDelay = `${Math.random() * 3}s`;
+            particle.style.animationDuration = `${3 + Math.random() * 4}s`;
+            sparklesContainer.appendChild(particle);
+        }
+    </script>
+</body>
+  </html>
